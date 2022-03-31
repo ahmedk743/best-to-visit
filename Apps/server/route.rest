@@ -1,0 +1,32 @@
+
+### Monkey around with newly created routes as following
+
+
+### 1. Create new user providing name, email & password
+POST http://localhost:4000/api/register
+Content-Type: application/json
+
+{
+    "name": "Tazalli",
+    "email": "tazallli@yahoo.com",
+    "password": "123456" 
+}
+
+### 2. Copy the token you get by running following call 
+POST http://localhost:4000/api/login
+Content-Type: application/json
+
+{
+    "email": "tazalli@gmail.com",
+    "password": "123456" 
+}
+
+### Paste token you got after Bearer keyword to get authorization, expires in 15mins
+POST http://localhost:4000/api/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyZDc4ZWU3ZjU3YjAyMDk3NDRlYjU1IiwibmFtZSI6IkFobWVkIn0sImlhdCI6MTY0NzMyMTczMSwiZXhwIjoxNjQ3MzIyNjMxfQ.8Vd_IZm_RzyGIwdR8-BRqQl4tEiUNO4zSU5p6xrdFnk
+
+{
+    "email": "tazalli@gmail.com",
+    "password": "123456" 
+}
+### 
