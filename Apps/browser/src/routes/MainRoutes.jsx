@@ -9,15 +9,17 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import MyMap from "../components/MyMap";
 import Book from "../pages/Book";
 import Places from "../pages/Places";
+import PlaceDetails from "../components/PlaceDetails";
 
 const MainRoutes = () => (
   <Routes>
     {/** Protected Routes */}
     {/** Wrap all Route under ProtectedRoutes element */}
-    <Route path="" element={<ProtectedRoutes />}>
+    <Route path="/" element={<ProtectedRoutes />}>
+      <Route path="/" element={<Places />} />
       <Route path="book" element={<Book />} />
-      <Route path="map" element={<MyMap />} />
-      <Route path="places" element={<Places />} />
+      <Route path="/places" element={<Places />} />
+      <Route path="place-details" element={<PlaceDetails />} />
     </Route>
 
     {/** Public Routes */}

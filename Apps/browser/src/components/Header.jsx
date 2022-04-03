@@ -36,6 +36,15 @@ function Header() {
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
+        <div class="navbar-start">
+          <Link to={{ pathname: "book" }} class="navbar-item">
+            Book a Table
+          </Link>
+          <Link to={{ pathname: "places" }} class="navbar-item">
+            Places to Visit
+          </Link>
+        </div>
+
         <div className="navbar-end">
           <div className="navbar-item">
             {isUserLoggedIn() ? (

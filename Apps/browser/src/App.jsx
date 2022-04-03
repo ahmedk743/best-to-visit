@@ -7,12 +7,13 @@ import "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/react-fontawesome";
 import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./routes/MainRoutes";
 
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      <MainRoutes />
       <Footer />
     </>
   );
