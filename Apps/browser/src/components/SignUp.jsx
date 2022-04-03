@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import axios from "axios";
+
 function SignUp() {
   const [viewPassword, setViewPassword] = useState(false);
 
@@ -32,19 +34,23 @@ function SignUp() {
     setError("");
     setLoading(true);
 
-    const response = await fetch("http://localhost:4000/api/register", {
+    let options = {
       method: "POST",
+      url: "http://localhost:4000/api/register",
       headers: {
-        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
       },
-      body: JSON.stringify({
+      data: {
         name,
         email,
         password,
-      }),
-    });
+      },
+    };
 
-    const data = await response.json();
+    const response = await axios(options);
+
+    const data = response.data;
 
     if (data.status === "ok") {
       setSuccess(true);

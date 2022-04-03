@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 function Login() {
   const [viewPassword, setViewPassword] = useState(false);
@@ -25,18 +26,22 @@ function Login() {
     setError("");
     setLoading(true);
 
-    const response = await fetch("http://localhost:4000/api/login", {
+    let options = {
       method: "POST",
+      url: "http://localhost:4000/api/login",
       headers: {
-        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
       },
-      body: JSON.stringify({
+      data: {
         email,
         password,
-      }),
-    });
+      },
+    };
 
-    const data = await response.json();
+    const response = await axios(options);
+
+    const data = response.data;
 
     if (data.status === "emailnot") {
       setError("User not found!");
