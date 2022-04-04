@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 
 import "bulma/css/bulma.css";
+
+import "./App.css";
+
 import "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/react-fontawesome";

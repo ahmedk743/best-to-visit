@@ -37,11 +37,20 @@ function Header() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div class="navbar-start">
+          <Link to={{ pathname: "destinations" }} class="navbar-item">
+            Destinations
+          </Link>
           <Link to={{ pathname: "book" }} class="navbar-item">
             Book a Table
           </Link>
           <Link to={{ pathname: "places" }} class="navbar-item">
             Places to Visit
+          </Link>
+          <Link to={{ pathname: "restaurants" }} class="navbar-item">
+            Restaurants
+          </Link>
+          <Link to={{ pathname: "email" }} class="navbar-item">
+            Email
           </Link>
         </div>
 

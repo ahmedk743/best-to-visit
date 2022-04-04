@@ -10,6 +10,9 @@ import MyMap from "../components/MyMap";
 import Book from "../pages/Book";
 import Places from "../pages/Places";
 import PlaceDetails from "../components/PlaceDetails";
+import Restaurants from "../pages/Restaurants";
+import Email from "../pages/Email";
+import Destinations from "../pages/Destinations";
 
 const MainRoutes = () => (
   <Routes>
@@ -19,6 +22,9 @@ const MainRoutes = () => (
       <Route path="/" element={<Places />} />
       <Route path="book" element={<Book />} />
       <Route path="/places" element={<Places />} />
+      <Route path="/restaurants" element={<Restaurants />} />
+      <Route path="/email" element={<Email />} />
+      <Route path="/destinations" element={<Destinations />} />
       <Route path="place-details" element={<PlaceDetails />} />
     </Route>
 

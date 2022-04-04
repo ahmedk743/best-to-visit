@@ -14,7 +14,7 @@ function Footer() {
         <div className="content has-text-centered">
           <span>Copyrights Reserved ⓒ {year}</span>
           <br />
-          <span>Developed by Tazalli Tasnim</span>
+          <span>Developed by Tazalli Tasnim & Istikbal Turut</span>
         </div>
       </div>
     </div>
